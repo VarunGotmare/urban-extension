@@ -16,7 +16,11 @@ let search = document.querySelector("#srch");
         let word = query.value;
         fetch(`https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=${word}`,options)
         .then(response => response.json())
-        .then(response => console.log(response))
+        .then(response => {
+            let search = response.list[0];
+            console.log(response)
+            result.innerHTML = search.definition;
+        })
         .catch(err => console.error(err));
 
     })
