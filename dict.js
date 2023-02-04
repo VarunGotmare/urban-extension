@@ -8,11 +8,11 @@ const options = {
 };
 let query = document.querySelector("#input");
 let result = document.querySelector("#err");
-let search = document.querySelector("#srch");
+let search = document.querySelector("#search");
 
 
     
-    search.addEventListener('click',()=> {
+    search.addEventListener("click",()=> {
         let word = query.value;
         fetch(`https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=${word}`,options)
         .then(response => response.json())
