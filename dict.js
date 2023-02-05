@@ -10,6 +10,10 @@ let query = document.querySelector("#input");
 let result = document.querySelector("#err");
 let search = document.querySelector("#search");
 
+window.addEventListener("load", ()=>{
+    const loader = document.querySelector(".loader");
+    loader.classList.add("loader-hidden");
+})
 
     
     search.addEventListener("click",()=> {

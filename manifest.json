@@ -2,9 +2,13 @@
     "name": "Urban Dictionary",
     "description":"An extension",
     "version":"0.0.1",
-    "manifest_version":3,
-    "action":{
+
+            "action":{
         "default_popup":"popup.html",
         "default_icon":"ud.png"
-    }
+    },
+    "manifest_version":3
+
+
+ }
 }

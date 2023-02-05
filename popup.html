@@ -2,16 +2,16 @@
 <html>
     <link rel="stylesheet" href="style.css">
        <div class="form">
-      <div class="title">UrbanDictionary</div>
+        <img src="ud_logo.png" class="center">
       <div style="text-align: center;" class="subtitle">Search for a phrase or word!</div>
       <div class="input-container ic1">
-        <input id="input" class="input" type="text" placeholder=" " />
-        <div class="cut"></div>
-        <label for="input" class="placeholder">Type your word here..</label>
+        <input id="input" class="input" type="text" placeholder="Type your word/phrase here.." />
+        
       </div>
-      <button id="search" class="submit">search</button>
+      <button onclick="window.location.href='result.html'" id="search" class="submit">search</button>
       <h3 id="err"> </h3>
     </div>
+    <div class="loader"></div>
     <script src="dict.js"></script>
 
 </html>
