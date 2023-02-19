@@ -55,9 +55,12 @@ body {
     background-color: skyblue;
     border-radius: 20px;
     box-sizing: border-box;
-    height: 50vh;
-    padding: 20px;
-    width: 50vw;
+    
+    padding:20px;
+
+    
+    
+    
   }
   
  .title {
@@ -108,10 +111,12 @@ body {
     cursor: pointer;
     font-size: 18px;
     height: 50px;
-    margin-top: 38px;
+    margin-top: 18px;
+    margin-left: 40%;
     outline: 0;
     text-align: center;
-    width: 100%;
+    width: 100px;
+    
   }
   
   .submit:active {
