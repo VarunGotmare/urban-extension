@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
     <link rel="stylesheet" href="style.css">
-       <div class="form">
-        <img src="ud_logo.png" class="center">
-      <div style="text-align: center;" class="subtitle">Search for a phrase or word!</div>
-      <div class="input-container ic1">
-        <input id="input" class="input" type="text" placeholder="Type your word/phrase here.." />
-        
-      </div>
-      <button onclick="window.location.href='result.html'" id="search" class="submit">search</button>
-      <h3 id="err"> </h3>
-    </div>
-    <div class="loader"></div>
+      <body>
+        <div class="wrapper">
+          <div class="content">
+           <h2>Urban Dictionary</h2>
+           <div class="form">
+             <div class="input">
+              <input type="text" id="input" placeholder="Type a word or phrase">
+              <button id="search">search</button>
+             </div>
+
+           </div>
+          </div>
+        </div>
+      </body>
     <script src="dict.js"></script>
 
 </html>

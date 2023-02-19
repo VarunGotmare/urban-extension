@@ -1,4 +1,6 @@
 
+
+
 const options = {
     method: 'GET',
     headers: {
@@ -14,6 +16,7 @@ window.addEventListener("load", ()=>{
     const loader = document.querySelector(".loader");
     loader.classList.add("loader-hidden");
 })
+
 
     
     search.addEventListener("click",()=> {
