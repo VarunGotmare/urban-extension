@@ -1,5 +1,6 @@
-
-
+const search = document.getElementById("search");
+const input = document.getElementById("input");
+const result = document.getElementById("res")
 
 const options = {
     method: 'GET',
@@ -8,28 +9,37 @@ const options = {
         'X-RapidAPI-Host': 'mashape-community-urban-dictionary.p.rapidapi.com'
     }
 };
-let query = document.querySelector("#input");
-let result = document.querySelector("#err");
-let search = document.querySelector("#search");
 
-window.addEventListener("load", ()=>{
-    const loader = document.querySelector(".loader");
-    loader.classList.add("loader-hidden");
-})
+
 
 
     
-    search.addEventListener("click",()=> {
-        let word = query.value;
-        fetch(`https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=${word}`,options)
+    search.addEventListener("click", () => {
+        let word = input.value;
+        console.log(word)
+        if (word === ""){
+            alert("Please Enter A Word");
+            return;
+        }
+        else{
+            fetch(`https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=${word}`,options)
         .then(response => response.json())
         .then(response => {
             let search = response.list[0];
             console.log(response)
-            result.innerHTML = search.definition;
+            result.innerHTML = `<div class="data">
+            <div id="meaning" class="meaning">
+              <h3>${word}</h3>
+            </div>
+            <div class="details">
+              <p>${search.definition}</p>
+            </div>
+           </div>`;
         })
         .catch(err => console.error(err));
-
-    })
+       
+        }
+    });
+   
 
 
